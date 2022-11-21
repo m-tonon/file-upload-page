@@ -12,6 +12,8 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
+app.use('/images', express.static('images')); 
+// serve this folder to the visitors - '/images' is a filter that start with /images
 
 app.use(userRoutes);
 
